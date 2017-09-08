@@ -19,9 +19,7 @@ public class issue_1871_example{
 	public static void method1(int i){
 
 		switch (i) {
-		  case 1:
-		    printOne();
-		    printTwo();
+		  case 1: printOne(); printTwo();
 		    break;
 		  case 2:
 		    printThree();
@@ -32,6 +30,7 @@ public class issue_1871_example{
 		    break;
 		  default:
 		    printAnything();
+		    break;
 		}
 
 	}
@@ -41,16 +40,12 @@ public class issue_1871_example{
 		  	printOne();
 		    printTwo();
 		}
-		else if (a >= 10 && a < 20) {
-		  	printThree();
-		}
+		else if (a >= 10 && a < 20) printThree();
 		else if (a >= 20 && a < 50) {
 		  	printOne();
 		    printTwo();
 		}
-		else {
-		  	printAnything();
-		}
+		else printAnything();
 	}
 
 
